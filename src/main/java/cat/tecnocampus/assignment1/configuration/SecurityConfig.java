@@ -1,4 +1,4 @@
-package cat.tecnocampus.assignment1;
+package cat.tecnocampus.assignment1.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;

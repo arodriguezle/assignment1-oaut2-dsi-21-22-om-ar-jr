@@ -1,0 +1,16 @@
+github:
+    client:
+        clientId: c082b0ee6ee007a22dff
+        clientSecret: b37f4cd537b6efc6cd85b417de4e27ed308185a6
+        accessTokenUri: https://github.com/login/oauth/access_token
+        userAuthorizationUri: https://github.com/login/oauth/authorize
+        clientAuthenticationScheme: form
+        scope: gist,repo
+    #    auto-aprove-scopes: '.*'
+    resource:
+        userInfoUri: https://api.github.com/user
+
+logging:
+    level:
+        org.springframework.security: DEBUG
+
