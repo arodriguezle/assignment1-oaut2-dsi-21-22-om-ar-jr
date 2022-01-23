@@ -1,6 +1,6 @@
-package cat.tecnocampus.assignment1.aplication;
+package cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication;
 
-import cat.tecnocampus.assignment1.aplication.dto.IssueDTO;
+import cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.dto.IssueDTO;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
 import org.springframework.http.HttpEntity;

@@ -1,4 +1,4 @@
-package cat.tecnocampus.assignment1.aplication.dto;
+package cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.dto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
