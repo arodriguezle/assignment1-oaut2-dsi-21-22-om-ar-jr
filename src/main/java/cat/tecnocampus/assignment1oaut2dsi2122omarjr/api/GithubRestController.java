@@ -1,6 +1,6 @@
 package cat.tecnocampus.assignment1oaut2dsi2122omarjr.api;
 
-
+import cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.GithubController;
 import cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.dto.IssueDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +11,9 @@ import java.security.Principal;
 
 @RestController
 public class GithubRestController {
-    private final cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.GithubController githubController;
+    private final GithubController githubController;
 
-    public GithubRestController(cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.GithubController githubController) {
+    public GithubRestController(GithubController githubController) {
         this.githubController = githubController;
     }
 
