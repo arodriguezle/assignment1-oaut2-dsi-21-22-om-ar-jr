@@ -1,5 +1,4 @@
 package cat.tecnocampus.assignment1oaut2dsi2122omarjr.configuration;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -14,7 +13,6 @@ import org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticat
 import org.springframework.security.oauth2.client.filter.OAuth2ClientContextFilter;
 import org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-
 import javax.servlet.Filter;
 
 @Configuration
@@ -32,8 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // @formatter:off
         http.antMatcher("/**").authorizeRequests().antMatchers("/", "/login**", "/webjars/**").permitAll()
                 .anyRequest().authenticated().and().csrf().disable()
-                .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class
-                );
+                .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class);
         // @formatter:on
     }
 

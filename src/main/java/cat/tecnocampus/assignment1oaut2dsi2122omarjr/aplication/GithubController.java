@@ -1,5 +1,4 @@
 package cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication;
-
 import cat.tecnocampus.assignment1oaut2dsi2122omarjr.aplication.dto.IssueDTO;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
@@ -8,7 +7,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Controller;
-
 import java.io.IOException;
 import java.security.Principal;
 
@@ -37,11 +35,8 @@ public class GithubController {
     public ResponseEntity<String> createIssues(Principal principal, IssueDTO issue, String owner, String repo) throws IOException {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         String issueJson = ow.writeValueAsString(issue);
-        HttpEntity<String> request =
-                new HttpEntity(issueJson);
-
+        HttpEntity<String> request = new HttpEntity(issueJson);
         ResponseEntity<String> response = gitHubRestTemplate.postForEntity(String.format(url_issues, owner, repo), request, String.class);
         return response;
-
     }
 }
